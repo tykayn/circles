@@ -99,8 +99,10 @@ div{
     text-align: center;
 }
 .c {
-    -moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
+    padding: 0;
+    margin: 0;
+/*    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; */
     background: #4679BD;
 }
 .c[data-splittable~='1']:hover{
@@ -112,7 +114,7 @@ div{
     background: #CCC;
 }
 .c.block.sub{
-   border-radius:0; 
+    border-radius:0; 
 }
 .block {
     padding: 0;

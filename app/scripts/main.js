@@ -4,8 +4,8 @@ hexa = '0123456789ABCDEF'; // all colours
 //hexa = '89ABCDEF'; // lightful colours
 //hexa = '0123456'; // colours batman would like
 
-hexLength = 6 ; // 3 or 6. the length of hexacolour code to be generated
-sideDivider = 2.03; // divide with a floating number since 2 would make a back return of the circles.
+hexLength = 6; // 3 or 6. the length of hexacolour code to be generated
+sideDivider = 2; // divide with a floating number since 2 would make a back return of the circles.
 
 //get a random colour
 rColor = function() {
@@ -22,15 +22,15 @@ mixColors = function(selfcol, rcol) {
     // average of each hexcode
     for (var i = 1; i < selfcol.length; i++) {
         var a = hexa.indexOf(selfcol[i]);
-        if( a == -1){
+        if (a == -1) {
             a = 5;
         }
         var b = hexa.indexOf(rcol[i]);
-        if( b == -1){
+        if (b == -1) {
             b = 5;
         }
-        var ab = Math.round((a*1 + b*1) / 2);
-    //    console.log(' a + b = ab ' + a + ' + ' + b + '  = ' + ( (a*1 + b*1) / 2))
+        var ab = Math.round((a * 1 + b * 1) / 2);
+        //    console.log(' a + b = ab ' + a + ' + ' + b + '  = ' + ( (a*1 + b*1) / 2))
         newCol += hexa[ab];
     }
     console.log('mixcolors ' + selfcol + ' ' + rcol + ' = ' + newCol);
@@ -49,8 +49,6 @@ subBlocks = function(level, selfCol) {
         var rcol = rColor();
 
         var color = mixColors(selfCol, rcol);
-        var color = mixColors(selfCol, color);
-        var color = mixColors(selfCol, color);
         var color = mixColors(selfCol, color);
         var color = mixColors(selfCol, color);
         var style = 'background : ' + color;
@@ -83,10 +81,10 @@ setSides = function() {
 splitCircle = function(obj, level) {
     var self = $(obj);
     var selfCol = self.data('bg');
-    if( selfCol == '#' || ''){
+    if (selfCol == '#' || '' || '#ccc') {
         var selfCol = '#fff';
     }
-    
+
 // var selfCol = self.css('background-colour');
     console.log('selfCol ');
     console.log(selfCol);
