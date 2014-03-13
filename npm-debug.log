@@ -1,0 +1,226 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'update', '-g', 'yo' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose node symlink /usr/bin/node
+5 verbose url raw yo
+6 verbose url resolving [ 'https://registry.npmjs.org/', './yo' ]
+7 verbose url resolved https://registry.npmjs.org/yo
+8 info trying registry request attempt 1 at 09:22:17
+9 verbose etag "6THU54IQM7GWPIG940UTZ4JJG"
+10 http GET https://registry.npmjs.org/yo
+11 http 200 https://registry.npmjs.org/yo
+12 silly registry.get cb [ 200,
+12 silly registry.get   { date: 'Thu, 13 Mar 2014 08:22:17 GMT',
+12 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+12 silly registry.get     etag: '"CQUE1GILC6HFRCRYC5MIDR1UK"',
+12 silly registry.get     'content-type': 'application/json',
+12 silly registry.get     via: '1.1 varnish',
+12 silly registry.get     'cache-control': 'max-age=1',
+12 silly registry.get     'content-length': '37834',
+12 silly registry.get     'accept-ranges': 'bytes',
+12 silly registry.get     age: '17',
+12 silly registry.get     'x-served-by': 'cache-v44-ASH, cache-fra1223-FRA',
+12 silly registry.get     'x-cache': 'HIT, HIT',
+12 silly registry.get     'x-cache-hits': '1, 1',
+12 silly registry.get     'x-timer': 'S1394684437.972326994,VS0,VS9,VE114,VE14499939',
+12 silly registry.get     vary: 'Accept',
+12 silly registry.get     'keep-alive': 'timeout=10, max=50',
+12 silly registry.get     connection: 'Keep-Alive' } ]
+13 info outdated updating [ [ '/usr/lib', 'yo', '1.0.4', '1.1.2', '1.1.2', '*' ] ]
+14 verbose install where,what [ '/usr/lib', [ 'yo@1.1.2' ] ]
+15 verbose cache add [ 'yo@1.1.2', null ]
+16 verbose cache add name=undefined spec="yo@1.1.2" args=["yo@1.1.2",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'yo@1.1.2',
+17 verbose parsed url   path: 'yo@1.1.2',
+17 verbose parsed url   href: 'yo@1.1.2' }
+18 verbose cache add name="yo" spec="1.1.2" args=["yo","1.1.2"]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: '1.1.2',
+19 verbose parsed url   path: '1.1.2',
+19 verbose parsed url   href: '1.1.2' }
+20 verbose addNamed [ 'yo', '1.1.2' ]
+21 verbose addNamed [ '1.1.2', '1.1.2' ]
+22 silly lockFile c4df5c1e-yo-1-1-2 yo@1.1.2
+23 verbose lock yo@1.1.2 /home/tykayn/.npm/c4df5c1e-yo-1-1-2.lock
+24 verbose url raw yo/1.1.2
+25 verbose url resolving [ 'https://registry.npmjs.org/', './yo/1.1.2' ]
+26 verbose url resolved https://registry.npmjs.org/yo/1.1.2
+27 info trying registry request attempt 1 at 09:22:18
+28 http GET https://registry.npmjs.org/yo/1.1.2
+29 http 200 https://registry.npmjs.org/yo/1.1.2
+30 silly registry.get cb [ 200,
+30 silly registry.get   { date: 'Thu, 13 Mar 2014 08:22:18 GMT',
+30 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+30 silly registry.get     etag: '"AZ1GZ8SV5E6E8O0ME7SJKLXCP"',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     'cache-control': 'max-age=1',
+30 silly registry.get     'content-length': '2873',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     age: '710952',
+30 silly registry.get     'x-served-by': 'cache-v36-ASH, cache-fra1229-FRA',
+30 silly registry.get     'x-cache': 'HIT, MISS',
+30 silly registry.get     'x-cache-hits': '3, 0',
+30 silly registry.get     'x-timer': 'S1394698938.362065554,VS0,VS-739,VE-739,VE92',
+30 silly registry.get     vary: 'Accept',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 silly lockFile b65dd06a-gistry-npmjs-org-yo-yo-1-1-2-tgz https://registry.npmjs.org/yo/-/yo-1.1.2.tgz
+32 verbose lock https://registry.npmjs.org/yo/-/yo-1.1.2.tgz /home/tykayn/.npm/b65dd06a-gistry-npmjs-org-yo-yo-1-1-2-tgz.lock
+33 verbose addRemoteTarball [ 'https://registry.npmjs.org/yo/-/yo-1.1.2.tgz',
+33 verbose addRemoteTarball   'a0d4da72e83fa0e0dbfe1d0ba258881b240ab854' ]
+34 info retry fetch attempt 1 at 09:22:18
+35 verbose fetch to= /home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/tmp.tgz
+36 http GET https://registry.npmjs.org/yo/-/yo-1.1.2.tgz
+37 http 200 https://registry.npmjs.org/yo/-/yo-1.1.2.tgz
+38 verbose tar unpack /home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/tmp.tgz
+39 silly lockFile 0ec6daa3-938407-0-927784375846386-package tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package
+40 verbose lock tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package /home/tykayn/.npm/0ec6daa3-938407-0-927784375846386-package.lock
+41 silly lockFile 4f211b4b-938407-0-927784375846386-tmp-tgz tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/tmp.tgz
+42 verbose lock tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/tmp.tgz /home/tykayn/.npm/4f211b4b-938407-0-927784375846386-tmp-tgz.lock
+43 silly gunzTarPerm modes [ '755', '644' ]
+44 silly gunzTarPerm extractEntry package.json
+45 silly gunzTarPerm extractEntry cli.js
+46 silly gunzTarPerm extractEntry yoyo.js
+47 silly gunzTarPerm extractEntry readme.md
+48 silly gunzTarPerm extractEntry scripts/doctor.js
+49 silly gunzTarPerm extractEntry yeoman.txt
+50 silly lockFile 0ec6daa3-938407-0-927784375846386-package tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package
+51 silly lockFile 0ec6daa3-938407-0-927784375846386-package tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package
+52 silly lockFile 4f211b4b-938407-0-927784375846386-tmp-tgz tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/tmp.tgz
+53 silly lockFile 4f211b4b-938407-0-927784375846386-tmp-tgz tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/tmp.tgz
+54 verbose tar pack [ '/home/tykayn/.npm/yo/1.1.2/package.tgz',
+54 verbose tar pack   '/home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package' ]
+55 verbose tarball /home/tykayn/.npm/yo/1.1.2/package.tgz
+56 verbose folder /home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package
+57 silly lockFile 0ec6daa3-938407-0-927784375846386-package tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package
+58 verbose lock tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package /home/tykayn/.npm/0ec6daa3-938407-0-927784375846386-package.lock
+59 silly lockFile 804f5bd1--tykayn-npm-yo-1-1-2-package-tgz tar:///home/tykayn/.npm/yo/1.1.2/package.tgz
+60 verbose lock tar:///home/tykayn/.npm/yo/1.1.2/package.tgz /home/tykayn/.npm/804f5bd1--tykayn-npm-yo-1-1-2-package-tgz.lock
+61 silly lockFile 0ec6daa3-938407-0-927784375846386-package tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package
+62 silly lockFile 0ec6daa3-938407-0-927784375846386-package tar:///home/tykayn/tmp/npm-5444-8JceySIg/1394698938407-0.927784375846386/package
+63 silly lockFile 804f5bd1--tykayn-npm-yo-1-1-2-package-tgz tar:///home/tykayn/.npm/yo/1.1.2/package.tgz
+64 silly lockFile 804f5bd1--tykayn-npm-yo-1-1-2-package-tgz tar:///home/tykayn/.npm/yo/1.1.2/package.tgz
+65 silly lockFile 8d5d9acb-home-tykayn-npm-yo-1-1-2-package /home/tykayn/.npm/yo/1.1.2/package
+66 verbose lock /home/tykayn/.npm/yo/1.1.2/package /home/tykayn/.npm/8d5d9acb-home-tykayn-npm-yo-1-1-2-package.lock
+67 silly lockFile 8d5d9acb-home-tykayn-npm-yo-1-1-2-package /home/tykayn/.npm/yo/1.1.2/package
+68 silly lockFile 8d5d9acb-home-tykayn-npm-yo-1-1-2-package /home/tykayn/.npm/yo/1.1.2/package
+69 verbose tar unpack /home/tykayn/.npm/yo/1.1.2/package.tgz
+70 silly lockFile b2fe8e79-home-tykayn-npm-yo-1-1-2-package tar:///home/tykayn/.npm/yo/1.1.2/package
+71 verbose lock tar:///home/tykayn/.npm/yo/1.1.2/package /home/tykayn/.npm/b2fe8e79-home-tykayn-npm-yo-1-1-2-package.lock
+72 silly lockFile 804f5bd1--tykayn-npm-yo-1-1-2-package-tgz tar:///home/tykayn/.npm/yo/1.1.2/package.tgz
+73 verbose lock tar:///home/tykayn/.npm/yo/1.1.2/package.tgz /home/tykayn/.npm/804f5bd1--tykayn-npm-yo-1-1-2-package-tgz.lock
+74 silly gunzTarPerm modes [ '755', '644' ]
+75 silly gunzTarPerm extractEntry package.json
+76 silly gunzTarPerm extractEntry cli.js
+77 silly gunzTarPerm extractEntry yoyo.js
+78 silly gunzTarPerm extractEntry readme.md
+79 silly gunzTarPerm extractEntry scripts/doctor.js
+80 silly gunzTarPerm extractEntry yeoman.txt
+81 silly lockFile b2fe8e79-home-tykayn-npm-yo-1-1-2-package tar:///home/tykayn/.npm/yo/1.1.2/package
+82 silly lockFile b2fe8e79-home-tykayn-npm-yo-1-1-2-package tar:///home/tykayn/.npm/yo/1.1.2/package
+83 silly lockFile 804f5bd1--tykayn-npm-yo-1-1-2-package-tgz tar:///home/tykayn/.npm/yo/1.1.2/package.tgz
+84 silly lockFile 804f5bd1--tykayn-npm-yo-1-1-2-package-tgz tar:///home/tykayn/.npm/yo/1.1.2/package.tgz
+85 verbose chmod /home/tykayn/.npm/yo/1.1.2/package.tgz 644
+86 verbose chown /home/tykayn/.npm/yo/1.1.2/package.tgz [ 1000, 1000 ]
+87 silly lockFile b65dd06a-gistry-npmjs-org-yo-yo-1-1-2-tgz https://registry.npmjs.org/yo/-/yo-1.1.2.tgz
+88 silly lockFile b65dd06a-gistry-npmjs-org-yo-yo-1-1-2-tgz https://registry.npmjs.org/yo/-/yo-1.1.2.tgz
+89 silly lockFile c4df5c1e-yo-1-1-2 yo@1.1.2
+90 silly lockFile c4df5c1e-yo-1-1-2 yo@1.1.2
+91 silly resolved [ { name: 'yo',
+91 silly resolved     version: '1.1.2',
+91 silly resolved     description: 'CLI tool for scaffolding out Yeoman projects',
+91 silly resolved     license: 'MIT',
+91 silly resolved     bin: { yo: 'cli.js' },
+91 silly resolved     repository: { type: 'git', url: 'git://github.com/yeoman/yo' },
+91 silly resolved     homepage: 'http://yeoman.io',
+91 silly resolved     author: { name: 'Chrome Developer Relations' },
+91 silly resolved     engines: { node: '>=0.8.0', npm: '>=1.2.10' },
+91 silly resolved     scripts:
+91 silly resolved      { test: 'grunt',
+91 silly resolved        postinstall: 'node ./scripts/doctor',
+91 silly resolved        postupdate: 'node ./scripts/doctor' },
+91 silly resolved     files: [ 'cli.js', 'yoyo.js', 'yeoman.txt', 'scripts/' ],
+91 silly resolved     keywords:
+91 silly resolved      [ 'front-end',
+91 silly resolved        'development',
+91 silly resolved        'dev',
+91 silly resolved        'build',
+91 silly resolved        'web',
+91 silly resolved        'tool',
+91 silly resolved        'cli',
+91 silly resolved        'scaffold',
+91 silly resolved        'stack' ],
+91 silly resolved     dependencies:
+91 silly resolved      { 'yeoman-generator': '~0.16.0',
+91 silly resolved        nopt: '~2.1.1',
+91 silly resolved        lodash: '~2.4.1',
+91 silly resolved        'update-notifier': '~0.1.3',
+91 silly resolved        insight: '~0.3.0',
+91 silly resolved        'sudo-block': '~0.3.0',
+91 silly resolved        async: '~0.2.9',
+91 silly resolved        open: '0.0.4',
+91 silly resolved        chalk: '~0.4.0',
+91 silly resolved        findup: '~0.1.3',
+91 silly resolved        shelljs: '~0.2.6' },
+91 silly resolved     peerDependencies: { 'grunt-cli': '~0.1.7', bower: '>=0.9.0' },
+91 silly resolved     devDependencies:
+91 silly resolved      { grunt: '~0.4.2',
+91 silly resolved        mockery: '~1.4.0',
+91 silly resolved        'grunt-contrib-jshint': '~0.8.0',
+91 silly resolved        'grunt-contrib-watch': '~0.5.3',
+91 silly resolved        'grunt-mocha-test': '~0.8.1' },
+91 silly resolved     engineStrict: true,
+91 silly resolved     preferGlobal: true,
+91 silly resolved     readme: '# yo [![Build Status](https://secure.travis-ci.org/yeoman/yo.png?branch=master)](http://travis-ci.org/yeoman/yo)\n\nCLI tool for scaffolding out [Yeoman](https://github.com/yeoman/yeoman) projects.\n\n![](screenshot.png)\n\n\n## [Documentation](https://github.com/yeoman/yeoman/wiki)\n\n\n## Options\n\n- `--no-color` flag to disable colors.\n\n- `--[no-]insight` to toggle anonymous [Insight](https://github.com/yeoman/insight) tracking which helps us improve Yeoman. Using either of these flags on the first run will prevent you from being prompted about it interactively. The flags can also be used to change it later on.\n\n\n## Troubleshooting\n\nRunning `yo doctor` command can help you troubleshoot common issues.\n\nIf `doctor` doesn\'t help, then check opened issues for a similar problem. Open a new issue if your problem haven\'t been reported yet. Make sure to always include the version of `yo` (`yo --version`) and Node.js (`node --version`) you use.\n\nIf your issue only occur using a generator, please report the issues on the generator\'s repository.\n\n## Contribute\n\nSee the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md).\n\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php) and copyright Google.\n',
+91 silly resolved     readmeFilename: 'readme.md',
+91 silly resolved     bugs: { url: 'https://github.com/yeoman/yo/issues' },
+91 silly resolved     _id: 'yo@1.1.2',
+91 silly resolved     dist: { shasum: 'c42640f1c9105430818d92b8aa3c7178f61bd035' },
+91 silly resolved     _from: 'yo@1.1.2',
+91 silly resolved     _resolved: 'https://registry.npmjs.org/yo/-/yo-1.1.2.tgz' } ]
+92 info install yo@1.1.2 into /usr/lib
+93 info installOne yo@1.1.2
+94 info /usr/lib/node_modules/yo unbuild
+95 info preuninstall yo@1.0.4
+96 info uninstall yo@1.0.4
+97 verbose true,/usr/lib/node_modules,/usr/lib/node_modules unbuild yo@1.0.4
+98 verbose /usr/bin,[object Object] binRoot
+99 info /usr/lib/node_modules/yo unbuild
+100 info preuninstall yo@1.0.4
+101 info uninstall yo@1.0.4
+102 verbose true,/usr/lib/node_modules,/usr/lib/node_modules unbuild yo@1.0.4
+103 verbose /usr/bin,[object Object] binRoot
+104 error error rolling back Error: EACCES, unlink '/usr/bin/yo'
+104 error error rolling back  yo@1.1.2 { [Error: EACCES, unlink '/usr/bin/yo'] errno: 3, code: 'EACCES', path: '/usr/bin/yo' }
+105 error Error: EACCES, unlink '/usr/bin/yo'
+105 error  { [Error: EACCES, unlink '/usr/bin/yo'] errno: 3, code: 'EACCES', path: '/usr/bin/yo' }
+106 error Please try running this command again as root/Administrator.
+107 error System Linux 3.5.0-47-generic
+108 error command "/usr/bin/node" "/usr/bin/npm" "update" "-g" "yo"
+109 error cwd /media/sdb1/www/circles
+110 error node -v v0.10.26
+111 error npm -v 1.4.3
+112 error path /usr/bin/yo
+113 error code EACCES
+114 error errno 3
+115 error stack Error: EACCES, unlink '/usr/bin/yo'
+116 verbose exit [ 3, true ]
