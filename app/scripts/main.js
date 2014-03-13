@@ -8,7 +8,7 @@ hexLength = 6; // 3 or 6. the length of hexacolour code to be generated
 sideDivider = 2; // divide with a floating number since 2 would make a back return of the circles.
 
 mixingColours = true; // to mix or not to mix with parent circle's colour.
-square = 0; // display circles or squares
+square = 1; // display circles or squares
 
 if(square){
     $('body').append('<style> .c.block {    border-radius: 0%;}</style>')
