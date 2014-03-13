@@ -16,23 +16,24 @@ rColor = function() {
 // manages the 4 sub blocks with their deepness.
 subBlocks = function(level) {
     var splittable = 1;
-    if(level == levelMax){
+    if(level >= levelMax){
         splittable = 0;
     }
-    var b;
+    var b ='';
     for (var i = 0; i < 2; i++) {
         var style = 'background : ' + rColor();
-        var block = '<div class="c block" style="' + style + '" data-level="' + level + '" data-splittable="'+splittable+'"></div>';
+        var block = '  <div class="c block" style="' + style + '" data-level="' + level + '" data-splittable="'+splittable+'"></div>';
         if (block !== undefined) {
             b += block;
         }
 
     }
+    console.log('b ' + b)
     return b;
 };
 
 // set the width and height of splittable blocks
-setSides = function(obj) {
+setSides = function() {
     $('.c[data-splittable]').each( function(index, e){
         var self = $(this);
        // var side = ( self.parent().width() / (self.data('level')*1 + 1)); 
@@ -44,9 +45,10 @@ setSides = function(obj) {
             'display' : 'block'
         };
         self.css(css);
+        console.log( ' level: '+ self.data('level'))
         console.log('sides done : side ' + side);
     })
-    console.log( ' $(obj).data(level) '+$(obj).data('level'))
+    
     
     
 
