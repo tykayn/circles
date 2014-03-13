@@ -4,24 +4,16 @@ hexa = '0123456789ABCDEF'; // all colours
 //hexa = '89ABCDEF'; // lightful colours
 //hexa = '0123456'; // colours batman would like
 
-hexLength = 3 ; // 3 or 6. the length of hexacolour code to be generated
-sideDivider = 2.03; // divide side by 2.01 since 2 would make a back return of the circles.
+hexLength = 6 ; // 3 or 6. the length of hexacolour code to be generated
+sideDivider = 2.03; // divide with a floating number since 2 would make a back return of the circles.
 
 //get a random colour
 rColor = function() {
-    var arr = hexa.split('');
     var color = '#';
     for (var i = 0; i < hexLength; i++) {
-        color += arr[Math.floor(Math.random() * arr.length)];
+        color += hexa[Math.floor(Math.random() * hexa.length)];
     }
     return color;
-}
-
-//mixing colours
-hexa2array = function(hexcode) {
-    var arr = hexcode.split('').splice(0, 1)
-    console.log(arr)
-    return arr;
 }
 
 //mixing colours
@@ -41,7 +33,7 @@ mixColors = function(selfcol, rcol) {
     //    console.log(' a + b = ab ' + a + ' + ' + b + '  = ' + ( (a*1 + b*1) / 2))
         newCol += hexa[ab];
     }
-  //  console.log('mixcolors ' + selfcol + ' ' + rcol + ' = ' + newCol);
+    console.log('mixcolors ' + selfcol + ' ' + rcol + ' = ' + newCol);
     return newCol;
 }
 
@@ -57,6 +49,10 @@ subBlocks = function(level, selfCol) {
         var rcol = rColor();
 
         var color = mixColors(selfCol, rcol);
+        var color = mixColors(selfCol, color);
+        var color = mixColors(selfCol, color);
+        var color = mixColors(selfCol, color);
+        var color = mixColors(selfCol, color);
         var style = 'background : ' + color;
         var block = '  <div class="c block sub" style="' + style + '" data-level="' + level + '" data-splittable="' + splittable + '" data-bg="' + color + '"></div>';
         if (block !== undefined) {
