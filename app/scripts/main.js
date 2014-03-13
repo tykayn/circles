@@ -4,11 +4,13 @@ hexa = '0123456789ABCDEF'; // all colours
 //hexa = '89ABCDEF'; // lightful colours
 //hexa = '0123456'; // colours batman would like
 
+hexLength = 3 // 3 or 6. the length of hexacolour code to be generated
+
 //get a random colour
 rColor = function() {
     var arr = hexa.split('');
     var color = '#';
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < hexLength; i++) {
         color += arr[Math.floor(Math.random() * arr.length)];
     }
     return color;
@@ -23,7 +25,7 @@ subBlocks = function(level) {
     for (var i = 0; i < 4; i++) {
         var color = rColor();
         var style = 'background : ' + color;
-        var block = '  <div class="c block" style="' + style + '" data-level="' + level + '" data-splittable="' + splittable + '" data-bg="' + color + '"></div>';
+        var block = '  <div class="c block sub" style="' + style + '" data-level="' + level + '" data-splittable="' + splittable + '" data-bg="' + color + '"></div>';
         if (block !== undefined) {
             b += block;
         }
@@ -34,12 +36,10 @@ subBlocks = function(level) {
 
 // set the width and height of splittable blocks
 setSides = function() {
-    
-    var sets = 0;
+
     $('.c[data-splittable]').each(function(index, e) {
         var self = $(this);
-        // var side = ( self.parent().width() / (self.data('level')*1 + 1)); 
-        var side = (self.parent().width() / 2.01);
+        var side = (self.parent().width() / 2.1);
         css = {
             /* 'padding' : side +'px',*/
             'width': side + 'px',
@@ -47,12 +47,8 @@ setSides = function() {
             'display': 'block'
         };
         self.css(css);
-        sets++;
     })
-//    console.log(' $(.c[data-splittable]) '+$('.c[data-splittable]').length)
-//    console.log(' setSides x '+sets)
-
-
+    $('.sub').removeClass('sub');
 
 }
 
@@ -64,7 +60,6 @@ splitCircle = function(obj, level) {
             .data('splittable', 0)
             .removeClass('c')
             .css('background', '')
-            // .append(level)
             .append(subBlocks(level));
     init();
 };
@@ -72,15 +67,13 @@ splitCircle = function(obj, level) {
 // checks the circle is ready to be splitted
 checkCircle = function() {
     var self = $(this);
-
     var level = self.data('level');
-
-
     if (level < levelMax) {
         self
         splitCircle(self, level + 1);
     }
 };
+
 init = function() {
     setSides();
     $('.c[data-splittable=1]').on('mouseenter', checkCircle);
