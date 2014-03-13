@@ -7,6 +7,12 @@ hexa = '0123456789ABCDEF'; // all colours
 hexLength = 6; // 3 or 6. the length of hexacolour code to be generated
 sideDivider = 2; // divide with a floating number since 2 would make a back return of the circles.
 
+mixingColours = true; // to mix or not to mix with parent circle's colour.
+square = 0; // display circles or squares
+
+if(square){
+    $('body').append('<style> .c.block {    border-radius: 0%;}</style>')
+}
 //get a random colour
 rColor = function() {
     var color = '#';
@@ -47,10 +53,17 @@ subBlocks = function(level, selfCol) {
     var b = '';
     for (var i = 0; i < 4; i++) {
         var rcol = rColor();
-
-        var color = mixColors(selfCol, rcol);
-        var color = mixColors(selfCol, color);
-        var color = mixColors(selfCol, color);
+        if( mixingColours ){
+            var color = mixColors(selfCol, rcol);
+         var color = mixColors(selfCol, color);
+//         var color = mixColors(selfCol, color);
+        }
+        else{
+            var color = rcol;
+        }
+        
+        
+        
         var style = 'background : ' + color;
         var block = '  <div class="c block sub" style="' + style + '" data-level="' + level + '" data-splittable="' + splittable + '" data-bg="' + color + '"></div>';
         if (block !== undefined) {
