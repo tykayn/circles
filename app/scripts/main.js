@@ -1,9 +1,12 @@
-// settings
+// gloabl settings
 levelMax = 6;
+hexa = '0123456789ABCDEF'; // all colours
+//hexa = '89ABCDEF'; // lightful colours
+//hexa = '0123456'; // colours batman would like
 
 //get a random colour
 rColor = function() {
-    hexa = '0123456789ABCDEF';
+    
     var arr = hexa.split('');
     var color = '#';
     for (var i = 0; i < 3; i++) {
@@ -20,8 +23,9 @@ subBlocks = function(level) {
     }
     var b ='';
     for (var i = 0; i < 4; i++) {
-        var style = 'background : ' + rColor();
-        var block = '  <div class="c block" style="' + style + '" data-level="' + level + '" data-splittable="'+splittable+'"></div>';
+        var color = rColor();
+        var style = 'background : ' + color;
+        var block = '  <div class="c block" style="' + style + '" data-level="' + level + '" data-splittable="'+splittable+'" data-bg="'+ color +'"></div>';
         if (block !== undefined) {
             b += block;
         }
