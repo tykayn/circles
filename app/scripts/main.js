@@ -60,6 +60,7 @@ splitCircle = function(obj, level) {
                 .data('level', 10)
                 .data('splittable', 0)
                 .removeClass('c')
+                .css('background', '')
                 // .append(level)
                 .append(subBlocks(level));
         init();
@@ -76,7 +77,7 @@ checkCircle = function() {
         console.log('level' + level);
         self
                 //.html(':o____')
-                .css('background', 'green');
+              // .css('background', 'green');
         splitCircle(self, level + 1);
     }
 };

@@ -13,6 +13,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 /* Space out content a bit */
 body {
+    background: #000;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -99,15 +100,15 @@ div{
 }
 .c {
 /*    width: 200px;
-    height: 200px;
+    height: 200px;*/
     -moz-border-radius: 50%; 
     -webkit-border-radius: 50%; 
-    border-radius: 50%;*/
+    border-radius: 50%;
     background: #4679BD;
     /*float: left;*/
 }
 .c[data-splittable~='1']{
-    border: solid 1px red;
+/*    border: solid 1px red;*/
 }
 .c[data-splittable~='1']:hover{
     background: yellow;
