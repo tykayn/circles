@@ -1,6 +1,5 @@
-w = $(window).width();
-h = $(window).height();
-levelMax = 5;
+// settings
+levelMax = 6;
 
 //get a random colour
 rColor = function() {
@@ -20,7 +19,7 @@ subBlocks = function(level) {
         splittable = 0;
     }
     var b ='';
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < 4; i++) {
         var style = 'background : ' + rColor();
         var block = '  <div class="c block" style="' + style + '" data-level="' + level + '" data-splittable="'+splittable+'"></div>';
         if (block !== undefined) {
@@ -37,7 +36,7 @@ setSides = function() {
     $('.c[data-splittable]').each( function(index, e){
         var self = $(this);
        // var side = ( self.parent().width() / (self.data('level')*1 + 1)); 
-        var side = ( self.parent().width() / 2.1); 
+        var side = ( self.parent().width() / 2.01); 
         css = {
            /* 'padding' : side +'px',*/
             'width':  side +'px',

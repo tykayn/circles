@@ -113,9 +113,10 @@ div{
     background: yellow;
 }
 .c.block {
-    display:block;
-    float: left;
+    display:inline-block;
     background: #CCC;
-    /* padding: 20%; */
-
+}
+.block {
+    /*border: solid 1px #000;*/
+    float: left;
 }
