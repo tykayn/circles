@@ -1,6 +1,6 @@
 w = $(window).width();
 h = $(window).height();
-levelMax = 4;
+levelMax = 5;
 
 //get a random colour
 rColor = function() {
@@ -22,7 +22,7 @@ subBlocks = function(level) {
     var b;
     for (var i = 0; i < 2; i++) {
         var style = 'background : ' + rColor();
-        var block = '<div class="c block" style="' + style + '" data-level="' + level + '" data-splittable="'+splittable+'"> b </div>';
+        var block = '<div class="c block" style="' + style + '" data-level="' + level + '" data-splittable="'+splittable+'"></div>';
         if (block !== undefined) {
             b += block;
         }
@@ -31,10 +31,12 @@ subBlocks = function(level) {
     return b;
 };
 
+// set the width and height of splittable blocks
 setSides = function(obj) {
     $('.c[data-splittable]').each( function(index, e){
         var self = $(this);
-        var side = ( $(window).width() / (self.data('level')*1 + 1)); 
+       // var side = ( self.parent().width() / (self.data('level')*1 + 1)); 
+        var side = ( self.parent().width() / 2.1); 
         css = {
            /* 'padding' : side +'px',*/
             'width':  side +'px',
@@ -57,7 +59,7 @@ splitCircle = function(obj, level) {
                 .data('level', 10)
                 .data('splittable', 0)
                 .removeClass('c')
-                // .append(level);
+                // .append(level)
                 .append(subBlocks(level));
         init();
 };
@@ -67,7 +69,10 @@ checkCircle = function() {
     var self = $(this);
 
     var level = self.data('level');
-    if (level < 5) {
+    
+
+    if (level < levelMax) {
+        console.log('level' + level);
         self
                 //.html(':o____')
                 .css('background', 'green');

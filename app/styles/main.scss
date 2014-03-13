@@ -106,6 +106,12 @@ div{
     background: #4679BD;
     /*float: left;*/
 }
+.c[data-splittable~='1']{
+    border: solid 1px red;
+}
+.c[data-splittable~='1']:hover{
+    background: yellow;
+}
 .c.block {
     display:block;
     float: left;
