@@ -103,7 +103,7 @@ div{
     height: 200px;*/
     -moz-border-radius: 50%; 
     -webkit-border-radius: 50%; 
-    border-radius: 50%;
+    
     background: #4679BD;
     /*float: left;*/
 }
@@ -116,10 +116,22 @@ div{
     background: yellow;
 }
 .c.block {
+    border-radius: 50%;
     display:inline-block;
     background: #CCC;
 }
 .block {
     /*border: solid 1px #000;*/
     float: left;
+    border-radius:0;
+    transition:all  0.5s  ease-in-out; 
+   
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
 }

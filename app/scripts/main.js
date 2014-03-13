@@ -34,6 +34,8 @@ subBlocks = function(level) {
 
 // set the width and height of splittable blocks
 setSides = function() {
+    
+    var sets = 0;
     $('.c[data-splittable]').each(function(index, e) {
         var self = $(this);
         // var side = ( self.parent().width() / (self.data('level')*1 + 1)); 
@@ -45,9 +47,10 @@ setSides = function() {
             'display': 'block'
         };
         self.css(css);
-
+        sets++;
     })
-
+//    console.log(' $(.c[data-splittable]) '+$('.c[data-splittable]').length)
+//    console.log(' setSides x '+sets)
 
 
 
