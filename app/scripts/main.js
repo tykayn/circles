@@ -1,10 +1,11 @@
 // gloabl settings
-levelMax = 6;
+levelMax = 6; // default is 6 like the circles demo
 hexa = '0123456789ABCDEF'; // all colours
 //hexa = '89ABCDEF'; // lightful colours
 //hexa = '0123456'; // colours batman would like
 
-hexLength = 3 // 3 or 6. the length of hexacolour code to be generated
+hexLength = 3 ; // 3 or 6. the length of hexacolour code to be generated
+sideDivider = 2.03; // divide side by 2.01 since 2 would make a back return of the circles.
 
 //get a random colour
 rColor = function() {
@@ -15,15 +16,47 @@ rColor = function() {
     }
     return color;
 }
+
+//mixing colours
+hexa2array = function(hexcode) {
+    var arr = hexcode.split('').splice(0, 1)
+    console.log(arr)
+    return arr;
+}
+
+//mixing colours
+mixColors = function(selfcol, rcol) {
+    var newCol = '#';
+    // average of each hexcode
+    for (var i = 1; i < selfcol.length; i++) {
+        var a = hexa.indexOf(selfcol[i]);
+        if( a == -1){
+            a = 5;
+        }
+        var b = hexa.indexOf(rcol[i]);
+        if( b == -1){
+            b = 5;
+        }
+        var ab = Math.round((a*1 + b*1) / 2);
+    //    console.log(' a + b = ab ' + a + ' + ' + b + '  = ' + ( (a*1 + b*1) / 2))
+        newCol += hexa[ab];
+    }
+  //  console.log('mixcolors ' + selfcol + ' ' + rcol + ' = ' + newCol);
+    return newCol;
+}
+
+
 // manages the 4 sub blocks with their deepness.
-subBlocks = function(level) {
+subBlocks = function(level, selfCol) {
     var splittable = 1;
     if (level >= levelMax) {
         splittable = 0;
     }
     var b = '';
     for (var i = 0; i < 4; i++) {
-        var color = rColor();
+        var rcol = rColor();
+
+        var color = mixColors(selfCol, rcol);
         var style = 'background : ' + color;
         var block = '  <div class="c block sub" style="' + style + '" data-level="' + level + '" data-splittable="' + splittable + '" data-bg="' + color + '"></div>';
         if (block !== undefined) {
@@ -36,31 +69,37 @@ subBlocks = function(level) {
 
 // set the width and height of splittable blocks
 setSides = function() {
-
     $('.c[data-splittable]').each(function(index, e) {
         var self = $(this);
-        var side = (self.parent().width() / 2.1);
+        var side = Math.floor(self.parent().width() / sideDivider);
         css = {
-            /* 'padding' : side +'px',*/
             'width': side + 'px',
             'height': side + 'px',
             'display': 'block'
         };
         self.css(css);
     })
-    $('.sub').removeClass('sub');
+    $('.sub').removeClass('sub'); // for transition
 
 }
 
 // splits a circle in four circles
 splitCircle = function(obj, level) {
+    var self = $(obj);
+    var selfCol = self.data('bg');
+    if( selfCol == '#' || ''){
+        var selfCol = '#fff';
+    }
+    
+// var selfCol = self.css('background-colour');
+    console.log('selfCol ');
+    console.log(selfCol);
 
-    $(obj)
-            .data('level', 10)
+    self.data('level', 10)
             .data('splittable', 0)
             .removeClass('c')
             .css('background', '')
-            .append(subBlocks(level));
+            .append(subBlocks(level, selfCol));
     init();
 };
 

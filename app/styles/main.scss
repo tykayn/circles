@@ -99,19 +99,10 @@ div{
     text-align: center;
 }
 .c {
-/*    width: 200px;
-    height: 200px;*/
     -moz-border-radius: 50%; 
     -webkit-border-radius: 50%; 
-    
     background: #4679BD;
-    /*float: left;*/
 }
-/*
-.c[data-splittable~='1']{
-    border: solid 1px red;
-}
-*/
 .c[data-splittable~='1']:hover{
     background: yellow;
 }
@@ -124,9 +115,7 @@ div{
    border-radius:0; 
 }
 .block {
-    /*border: solid 1px #000;*/
     float: left;
     border-radius:0;
     transition:all  0.5s  ease-in-out; 
-   
 }
