@@ -8,9 +8,11 @@ hexLength = 6; // 3 or 6. the length of hexacolour code to be generated
 sideDivider = 2; // divide with a floating number since 2 would make a back return of the circles.
 
 mixingColours = true; // to mix or not to mix with parent circle's colour.
-square = 1; // display circles or squares
+square = 0; // display circles with the value of 0 or squares with 1
+// end of settings
 
-if(square){
+
+if (square) {
     $('body').append('<style> .c.block {    border-radius: 0%;}</style>')
 }
 //get a random colour
@@ -53,17 +55,17 @@ subBlocks = function(level, selfCol) {
     var b = '';
     for (var i = 0; i < 4; i++) {
         var rcol = rColor();
-        if( mixingColours ){
+        if (mixingColours) {
             var color = mixColors(selfCol, rcol);
-         var color = mixColors(selfCol, color);
+            var color = mixColors(selfCol, color);
 //         var color = mixColors(selfCol, color);
         }
-        else{
+        else {
             var color = rcol;
         }
-        
-        
-        
+
+
+
         var style = 'background : ' + color;
         var block = '  <div class="c block sub" style="' + style + '" data-level="' + level + '" data-splittable="' + splittable + '" data-bg="' + color + '"></div>';
         if (block !== undefined) {
@@ -78,13 +80,24 @@ subBlocks = function(level, selfCol) {
 setSides = function() {
     $('.c[data-splittable]').each(function(index, e) {
         var self = $(this);
+        console.log(self.attr('data-level'));
+
         var side = Math.floor(self.parent().width() / sideDivider);
+        //first circle should be large.
+        if (self.attr('data-level') != '1') {
+            var side = Math.floor(self.parent().width() / sideDivider);
+
+        }
+        else {
+            var side = Math.floor(self.parent().width() * 0.99);
+        }
         css = {
             'width': side + 'px',
             'height': side + 'px',
             'display': 'block'
         };
         self.css(css);
+
     })
     $('.sub').removeClass('sub'); // for transition
 
